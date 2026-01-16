@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Competitive soccer league for 8 year old girls in Raleigh NC. Professional coaching, skill development, and a fun environment for young athletes.">
+    <meta name="keywords" content="youth soccer, Raleigh NC, girls soccer, competitive soccer, 8 year old">
+    <meta name="author" content="Carolina Velocity">
+    <title>Competitive Youth Soccer League | Raleigh NC | Carolina Velocity</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .hero-overlay {
+            background: rgba(0, 0, 0, 0.75);
+        }
+        
+        .gradient-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .gradient-secondary {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .card-hover {
+            transition: all 300ms ease-in-out;
+        }
+        
+        .card-hover:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-hover {
+            transition: all 300ms ease-in-out;
+        }
+        
+        .btn-hover:hover {
+            transform: scale(1.02);
+        }
+        
+        .btn-hover:active {
+            transform: scale(0.98);
+        }
+        
+        .feature-icon {
+            transition: all 300ms ease-in-out;
+        }
+        
+        .feature-icon:hover {
+            transform: translateY(-5px);
+        }
+        
+        .faq-answer {
+            transition: all 300ms ease-in-out;
+            max-height: 500px;
+            overflow: hidden;
+        }
+        
+        .faq-answer.hidden {
+            max-height: 0;
+            opacity: 0;
+        }
+        
+        .faq-icon {
+            transition: transform 300ms ease-in-out;
+        }
+        
+        .testimonial-card {
+            transition: all 300ms ease-in-out;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .benefit-image {
+            background-size: cover;
+            background-position: center;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeIn 500ms ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 gradient-primary rounded-lg flex items-center justify-center">
+                        <i class="fas fa-soccer-ball text-white text-lg"></i>
+                    </div>
+                    <span class="text-xl font-bold text-gray-900">Carolina Velocity</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-purple-600 transition-colors duration-300 font-medium">Home</a>
+                    <a href="#features" class="text-gray-700 hover:text-purple-600 transition-colors duration-300 font-medium">Features</a>
+                    <a href="#benefits" class="text-gray-700 hover:text-purple-600 transition-colors duration-300 font-medium">Benefits</a>
+                    <a href="#about" class="text-gray-700 hover:text-purple-600 transition-colors duration-300 font-medium">About</a>
+                    <a href="#testimonials" class="text-gray-700 hover:text-purple-600 transition-colors duration-300 font-medium">Testimonials</a>
+                    <a href="#faq" class="text-gray-700 hover:text-purple-600 transition-colors duration-300 font-medium">FAQ</a>
+                    <a href="#contact" class="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition-all duration-300 font-medium">Contact</a>
+                </nav>
+                
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-button md:hidden flex items-center justify-center w-10 h-10">
+                    <i class="fas fa-bars text-2xl text-gray-900"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation Menu -->
+            <nav class="mobile-menu hidden md:hidden pb-4 border-t border-gray-200">
+                <a href="#home" class="block py-2 px-4 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors duration-300 font-medium">Home</a>
+                <a href="#features" class="block py-2 px-4 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors duration-300 font-medium">Features</a>
+                <a href="#benefits" class="block py-2 px-4 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors duration-300 font-medium">Benefits</a>
+                <a href="#about" class="block py-2 px-4 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors duration-300 font-medium">About</a>
+                <a href="#testimonials" class="block py-2 px-4 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors duration-300 font-medium">Testimonials</a>
+                <a href="#faq" class="block py-2 px-4 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors duration-300 font-medium">FAQ</a>
+                <a href="#contact" class="block py-2 px-4 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors duration-300 font-medium">Contact</a>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-25" style="background-image: url('https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=1600&h=900&fit=crop&q=80')"></div>
+        </div>
+        
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0 hero-overlay z-10"></div>
+        
+        <!-- Content -->
+        <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-20">
+            <div class="fade-in">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
+                    Competitive Soccer League for 8 Year Old Girls in Raleigh NC
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-100 mb-8 leading-relaxed max-w-3xl mx-auto">
+                    Competitive soccer for 8 year old girls in Raleigh NC
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="https://calendar.app.google/HiB2kmbornqpo5os8" target="_blank" rel="noopener noreferrer" class="btn-hover gradient-primary text-white px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl">
+                        <i class="fas fa-calendar-check mr-2"></i>Register Now
+                    </a>
+                    <a href="#features" class="btn-hover bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl">
+                        <i class="fas fa-arrow-down mr-2"></i>Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Video Section -->
+    <section class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">See Our Program in Action</h2>
+                <p class="text-lg text-gray-600">Watch highlights from our competitive youth soccer league</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="relative w-full bg-black rounded-xl overflow-hidden shadow-2xl" style="padding-bottom: 56.25%;">
+                    <iframe 
+                        class="absolute inset-0 w-full h-full"
+                        src="https://www.youtube.com/embed/DcMBxYhYbS4?rel=0&modestbranding=1&autohide=1"
+                        title="Carolina Velocity Youth Soccer"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section id="features" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Carolina Velocity?</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Discover what makes our competitive youth soccer program the best choice for your daughter</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1: Skill Development -->
+                <div class="card-hover bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+                    <div class="flex justify-center mb-6">
+                        <div class="w-16 h-16 gradient-primary rounded-full flex items-center justify-center shadow-lg">
+                            <i class="fas fa-graduation-cap text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Skill Development</h3>
+                    <p class="text-gray-600 text-center leading-relaxed">
+                        Comprehensive training programs designed to develop technical skills, tactical awareness, and game intelligence through structured coaching and progressive challenges.
+                    </p>
+                </div>
+                
+                <!-- Feature 2: Professional Coaching -->
+                <div class="card-hover bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+                    <div class="flex justify-center mb-6">
+                        <div class="w-16 h-16 gradient-primary rounded-full flex items-center justify-center shadow-lg">
+                            <i class="fas fa-chalkboard-user text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Professional Coaching</h3>
+                    <p class="text-gray-600 text-center leading-relaxed">
+                        Our certified coaches bring years of experience and expertise, providing personalized instruction and mentorship to help each player reach their full potential.
+                    </p>
+                </div>
+                
+                <!-- Feature 3: Fun Environment -->
+                <div class="card-hover bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+                    <div class="flex justify-center mb-6">
+                        <div class="w-16 h-16 gradient-primary rounded-full flex items-center justify-center shadow-lg">
+                            <i class="fas fa-heart text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Fun Environment</h3>
+                    <p class="text-gray-600 text-center leading-relaxed">
+                        We create an inclusive, supportive atmosphere where young athletes can enjoy the game, build lasting friendships, and develop a lifelong love for soccer.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Benefits for Your Daughter</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Discover the transformative impact of competitive youth soccer</p>
+            </div>
+            
+            <!-- Benefit 1: Skill Development -->
+            <div class="mb-16 md:mb-24">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="order-2 md:order-1">
+                        <div class="benefit-image rounded-xl shadow-xl h-80 md:h-96" style="background-image: url('https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&h=600&fit=crop&q=80')"></div>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <h3 class="text-3xl font-bold text-gray-900 mb-4">Advanced Skill Development</h3>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                            Our competitive program focuses on developing fundamental soccer skills including ball control, passing accuracy, shooting technique, and tactical positioning. Young players progress through structured drills and game scenarios that challenge them to improve continuously.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-purple-600 font-bold mr-3 mt-1"></i>
+                                <span class="text-gray-700">Technical skill mastery</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-purple-600 font-bold mr-3 mt-1"></i>
+                                <span class="text-gray-700">Game-specific training</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-purple-600 font-bold mr-3 mt-1"></i>
+                                <span class="text-gray-700">Progressive challenges</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Benefit 2: Build Confidence -->
+            <div class="mb-16 md:mb-24">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-3xl font-bold text-gray-900 mb-4">Build Confidence</h3>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                            Competitive soccer provides the perfect platform for young girls to build self-confidence and develop a strong sense of self-worth. Through overcoming challenges, achieving goals, and receiving positive reinforcement from coaches and teammates, players gain confidence that extends beyond the soccer field.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-purple-600 font-bold mr-3 mt-1"></i>
+                                <span class="text-gray-700">Personal achievement recognition</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-purple-600 font-bold mr-3 mt-1"></i>
+                                <span class="text-gray-700">Leadership opportunities</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-purple-600 font-bold mr-3 mt-1"></i>
+                                <span class="text-gray-700">Resilience building</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="benefit-image rounded-xl shadow-xl h-80 md:h-96" style="background-image: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&h=600&fit=crop&q=80')"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Benefit 3: Meet New Friends -->
+            <div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="order-2 md:order-1">
+                        <div class="benefit-image rounded-xl shadow-xl h-80 md:h-96" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop&q=80')"></div>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <h3 class="text-3xl font-bold text-gray-900 mb-4">Meet New Friends</h3>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                            Our program brings together young athletes from across Raleigh, creating lasting friendships and a strong sense of community. Through teamwork, shared experiences, and social activities, players develop meaningful connections that often extend beyond the soccer season.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-purple-600 font-bold mr-3 mt-1"></i>
+                                <span class="text-gray-700">Team bonding activities</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-purple-600 font-bold mr-3 mt-1"></i>
+                                <span class="text-gray-700">Community connections</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-purple-600 font-bold mr-3 mt-1"></i>
+                                <span class="text-gray-700">Social skill development</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Us Section -->
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">About Carolina Velocity</h2>
+                <p class="text-lg text-gray-600">Learn about our commitment to youth soccer excellence</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Our Story</h3>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        Carolina Velocity was founded in 2015 with a simple mission: to provide young athletes in Raleigh, North Carolina with access to world-class competitive soccer training. What started as a small grassroots program has grown into one of the region's premier youth soccer organizations, serving hundreds of players each season. Our founders believed that every young athlete deserves the opportunity to develop their skills in a supportive, professional environment that emphasizes both competitive excellence and personal growth.
+                    </p>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        Over the past decade, we've built a reputation for developing not just better soccer players, but better young people. Our alumni have gone on to play at the collegiate level, earn academic scholarships, and become leaders in their communities. We're proud of the impact we've made and remain dedicated to nurturing the next generation of athletes.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Our Mission & Values</h3>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        At Carolina Velocity, our mission is to empower young female athletes through competitive soccer, fostering excellence, confidence, and lifelong friendships. We believe in the transformative power of sports and are committed to creating an inclusive environment where every player can thrive. Our core values include integrity, teamwork, continuous improvement, and a passion for the beautiful game.
+                    </p>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        We envision a future where every young girl in Raleigh has access to quality coaching, state-of-the-art facilities, and the opportunity to compete at the highest levels. We're not just developing soccer players—we're building confident, resilient young women who will make a positive impact in their communities long after they hang up their cleats.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Parents & Players Say</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Real experiences from families in the Carolina Velocity community</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        "My daughter has been with Carolina Velocity for two seasons now, and the transformation has been incredible. She's not only improved her soccer skills dramatically, but she's also become more confident and outgoing. The coaches really care about each player's development, and the team environment is supportive and fun. We couldn't be happier with our choice!"
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-purple-200 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-purple-600"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900">Sarah Mitchell</p>
+                            <p class="text-gray-600 text-sm">Parent of Emma, Age 8</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        "As a coach myself, I'm impressed by the professionalism and expertise of the Carolina Velocity coaching staff. They've taken my daughter from a beginner to a confident midfielder in just one season. The training is well-structured, the competition is appropriate for her age group, and the focus on both skill development and character building is exactly what we were looking for."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-purple-200 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-purple-600"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900">Coach James Rodriguez</p>
+                            <p class="text-gray-600 text-sm">Parent of Sophia, Age 8</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        "The best part about Carolina Velocity isn't just the soccer training—it's the friendships. My daughter has made such wonderful friends on her team, and they support each other both on and off the field. The team events and activities create a real sense of community. It's been amazing to watch her grow as a player and as a person."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-purple-200 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-purple-600"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900">Jennifer Thompson</p>
+                            <p class="text-gray-600 text-sm">Parent of Olivia, Age 8</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        "We were hesitant about committing to a competitive league, but Carolina Velocity made it such a positive experience. The coaching staff is patient and encouraging, they celebrate every player's progress, and they truly understand the developmental needs of 8-year-olds. My daughter looks forward to practice every single week. This is the real deal!"
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-purple-200 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-purple-600"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900">Michael Chen</p>
+                            <p class="text-gray-600 text-sm">Parent of Lily, Age 8</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 md:py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+                <p class="text-lg text-gray-600">Find answers to common questions about our program</p>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item bg-white rounded-xl border border-gray-200 overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <button class="faq-question w-full px-6 py-5 flex items-center justify-between bg-white hover:bg-gray-50 transition-colors duration-300">
+                        <h3 class="text-lg font-bold text-gray-900 text-left">What age groups do you serve?</h3>
+                        <i class="faq-icon fas fa-chevron-down text-purple-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-5 bg-gray-50 border-t border-gray-200">
+                        <p class="text-gray-600 leading-relaxed">
+                            Carolina Velocity offers competitive soccer programs for girls ages 6 through 18. Our 8-year-old program is one of our most popular divisions, with multiple teams at different competitive levels to ensure each player is appropriately challenged. We also offer programs for younger and older age groups, allowing players to grow with us throughout their youth soccer journey.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="faq-item bg-white rounded-xl border border-gray-200 overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <button class="faq-question w-full px-6 py-5 flex items-center justify-between bg-white hover:bg-gray-50 transition-colors duration-300">
+                        <h3 class="text-lg font-bold text-gray-900 text-left">What is the cost and what does it include?</h3>
+                        <i class="faq-icon fas fa-chevron-down text-purple-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-5 bg-gray-50 border-t border-gray-200">
+                        <p class="text-gray-600 leading-relaxed">
+                            Our competitive program includes twice-weekly training sessions with professional coaches, competitive match play during the season, team uniforms, access to our training facilities, and participation in league tournaments. Pricing varies depending on the team level and season length. We offer flexible payment plans and financial assistance options for families who need them. Contact us for a detailed pricing quote and to discuss any questions about program costs.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="faq-item bg-white rounded-xl border border-gray-200 overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <button class="faq-question w-full px-6 py-5 flex items-center justify-between bg-white hover:bg-gray-50 transition-colors duration-300">
+                        <h3 class="text-lg font-bold text-gray-900 text-left">Do players need prior soccer experience to join?</h3>
+                        <i class="faq-icon fas fa-chevron-down text-purple-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-5 bg-gray-50 border-t border-gray-200">
+                        <p class="text-gray-600 leading-relaxed">
+                            While our competitive program is designed for players with some soccer experience, we welcome players of all skill levels. We have teams at different competitive levels, so beginners are placed with other developing players and receive appropriate coaching for their level. Our coaches are skilled at working with players at all stages of development and will help your daughter improve at her own pace while still providing competitive challenges.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="faq-item bg-white rounded-xl border border-gray-200 overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <button class="faq-question w-full px-6 py-5 flex items-center justify-between bg-white hover:bg-gray-50 transition-colors duration-300">
+                        <h3 class="text-lg font-bold text-gray-900 text-left">When is the season and how long does it last?</h3>
+                        <i class="faq-icon fas fa-chevron-down text-purple-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-5 bg-gray-50 border-t border-gray-200">
+                        <p class="text-gray-600 leading-relaxed">
+                            We offer both fall and spring competitive seasons, each running approximately 10-12 weeks. The fall season typically runs from August through October, while the spring season runs from March through May. We also offer summer camps and training opportunities for players who want to continue developing during the off-season. Players can register for one season or commit to both seasons. Contact us for specific dates and registration deadlines for the upcoming season.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="relative py-16 md:py-24 overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30" style="background-image: url('https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=1600&h=900&fit=crop&q=80')"></div>
+        </div>
+        
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0 bg-black opacity-70 z-10"></div>
+        
+        <!-- Content -->
+        <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                Ready to Join the Team?
+            </h2>
+            <p class="text-xl text-gray-100 mb-8 max-w-2xl mx-auto leading-relaxed">
+                Give your daughter the opportunity to develop her soccer skills, build confidence, and make lifelong friendships with Carolina Velocity.
+            </p>
+            <a href="https://calendar.app.google/HiB2kmbornqpo5os8" target="_blank" rel="noopener noreferrer" class="btn-hover gradient-secondary text-white px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl inline-block">
+                <i class="fas fa-calendar-check mr-2"></i>Register Your Daughter Today
+            </a>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+                <p class="text-lg text-gray-600">Have questions? We'd love to hear from you!</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Contact Information -->
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-8">Contact Information</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 gradient-primary rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-envelope text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1">Email</h4>
+                                <a href="mailto:marcus@carolinavelocity.com" class="text-purple-600 hover:text-purple-700 transition-colors duration-300 text-lg">
+                                    marcus@carolinavelocity.com
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 gradient-primary rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1">Location</h4>
+                                <p class="text-gray-600 text-lg">Raleigh, North Carolina</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 gradient-primary rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-clock text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1">Response Time</h4>
+                                <p class="text-gray-600 text-lg">We typically respond within 24 hours</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 pt-8 border-t border-gray-300">
+                        <h4 class="font-bold text-gray-900 mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-12 h-12 gradient-primary rounded-lg flex items-center justify-center text-white hover:shadow-lg transition-all duration-300">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 gradient-primary rounded-lg flex items-center justify-center text-white hover:shadow-lg transition-all duration-300">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 gradient-primary rounded-lg flex items-center justify-center text-white hover:shadow-lg transition-all duration-300">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 gradient-primary rounded-lg flex items-center justify-center text-white hover:shadow-lg transition-all duration-300">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-bold text-gray-900 mb-2">Your Name</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-all duration-300" placeholder="John Doe">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-bold text-gray-900 mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-all duration-300" placeholder="john@example.com">
+                        </div>
+                        
+                        <div>
+                            <label for="daughter-name" class="block text-sm font-bold text-gray-900 mb-2">Daughter's Name</label>
+                            <input type="text" id="daughter-name" name="daughter-name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-all duration-300" placeholder="Emma">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-bold text-gray-900 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-all duration-300" placeholder="Tell us about your daughter and any questions you have..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-hover w-full gradient-primary text-white py-3 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl">
+                            <i class="fas fa-paper-plane mr-2"></i>Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-100 py-12 md:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 gradient-primary rounded-lg flex items-center justify-center">
+                            <i class="fas fa-soccer-ball text-white text-lg"></i>
+                        </div>
+                        <span class="text-xl font-bold">Carolina Velocity</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                        Competitive youth soccer excellence in Raleigh, North Carolina. Developing skilled athletes and confident young women.
+                    </p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-bold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors duration-300">Home</a></li>
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition-colors duration-300">Features</a></li>
+                        <li><a href="#benefits" class="text-gray-400 hover:text-white transition-colors duration-300">Benefits</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors duration-300">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Resources -->
+                <div>
+                    <h4 class="font-bold text-white mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white transition-colors duration-300">Testimonials</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-white transition-colors duration-300">FAQ</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-white transition-colors duration-300">Blog</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Legal -->
+                <div>
+                    <h4 class="font-bold text-white mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-white transition-colors duration-300">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-white transition-colors duration-300">Terms of Service</a></li>
+                        <li><a href="mailto:marcus@carolinavelocity.com" class="text-gray-400 hover:text-white transition-colors duration-300">Contact Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Bottom Footer -->
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                        &copy; <span id="year"></span> Carolina Velocity. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-facebook-f text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-instagram text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-twitter text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-youtube text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.querySelector('header nav .mobile-menu-button');
+            const mobileMenu = document.querySelector('header nav .mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
+                });
+
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+
+            // FAQ Accordion Toggle
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                if (question) {
+                    question.addEventListener('click', () => {
+                        const answer = item.querySelector('.faq-answer');
+                        const isOpen = !answer.classList.contains('hidden');
+                        
+                        // Close all other FAQ items
+                        faqItems.forEach(otherItem => {
+                            if (otherItem !== item) {
+                                otherItem.querySelector('.faq-answer')?.classList.add('hidden');
+                                otherItem.querySelector('.faq-icon')?.classList.remove('rotate-180');
+                            }
+                        });
+                        
+                        // Toggle current item
+                        answer?.classList.toggle('hidden');
+                        item.querySelector('.faq-icon')?.classList.toggle('rotate-180');
+                    });
+                }
+            });
+
+            // Smooth Scroll for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#' && href.length > 1) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            });
+            
+            // Contact Form Submission
+            const contactForm = document.querySelector('form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Get form data
+                    const formData = new FormData(this);
+                    const data = {
+                        name: formData.get('name'),
+                        email: formData.get('email'),
+                        daughter_name: formData.get('daughter-name'),
+                        message: formData.get('message')
+                    };
+                    
+                    // Create mailto link
+                    const subject = encodeURIComponent('Carolina Velocity Inquiry');
+                    const body = encodeURIComponent(
+                        `Name: ${data.name}\n` +
+                        `Email: ${data.email}\n` +
+                        `Daughter's Name: ${data.daughter_name}\n\n` +
+                        `Message:\n${data.message}`
+                    );
+                    
+                    window.location.href = `mailto:marcus@carolinavelocity.com?subject=${subject}&body=${body}`;
+                    
+                    // Reset form
+                    this.reset();
+                });
+            }
+        });
+    </script>
+</body>
+</html>
